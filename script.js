@@ -29,7 +29,7 @@ tl.to("#loader", {
 });
 
 tl.to("#loader", {
- display: none
+ display: "none"
 });
 }
 
@@ -39,3 +39,12 @@ const scroll = new LocomotiveScroll({
     el: document.querySelector('#main'),
     smooth: true
 });
+
+var elems = document.querySelectorAll(".elem")
+var pg = document.querySelector("#page2")
+elems.forEach(function(ele){
+   ele.addEventListener("mouseenter",function(){
+    var bg = ele.getAttribute("data-img");
+     pg.style.backgroundImage = `url(${bg})`;
+   })
+})
