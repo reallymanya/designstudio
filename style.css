@@ -36,7 +36,7 @@ html,body{
     justify-content: center;
     text-align: center;
 z-index: 99;
-/* display: none; */
+display: none;
 }
 
 #loader h1{
@@ -202,8 +202,70 @@ z-index: 7;
     box-shadow: 10px 0px 20px 20px #ffe85c  , -10px 0px 20px 100px  #f9df3a;
 }
 #page3{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #fff;
 
 }
+
+.img-container{
+padding: 30px;
+display: flex;
+align-items: flex-start;
+flex-wrap: wrap;
+gap: 25px;
+}
+
+#img-div{
+    /* height: 40vw; */
+    width: 28vw;
+    background-color: red;
+    position: relative;
+    overflow: hidden;
+    margin: 40px 16px;
+}
+
+#img-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+   object-position: center;
+   transition: all ease 0.5s;
+  
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: all ease 0.5s;
+    z-index: 9;
+}
+
+.overlay p{
+    color: white;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 2.5vw;
+    opacity: 0;
+    transition: all ease 0.5s;
+    /* transition-delay: 0.2s; */
+}
+
+#img-div:hover .overlay{
+    background-color: #000000f2;
+}
+
+#img-div:hover p{
+    opacity: 1;
+}
+
+#img-div:hover img{
+    scale: 1.1;
+}
+

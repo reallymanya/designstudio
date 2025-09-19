@@ -35,10 +35,10 @@ tl.to("#loader", {
 
 loading();
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true
-});
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('#main'),
+//     smooth: true
+// });
 
 var elems = document.querySelectorAll(".elem")
 var pg = document.querySelector("#page2")
