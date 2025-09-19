@@ -54,6 +54,14 @@ elems.forEach(function(ele){
    })
 })
 
+document.querySelector("#works-btn").addEventListener("click", () => {
+  scroll.scrollTo("#page3");
+});
+
+document.querySelector("#clients-btn").addEventListener("click", () => {
+  scroll.scrollTo("#page2");
+});
+
 document.querySelector("#footer .ri-arrow-up-s-line").addEventListener("click",() =>{
   scroll.scrollTo(0)
 })
@@ -62,6 +70,7 @@ document.querySelector("#footer h2").addEventListener("click",() =>{
   scroll.scrollTo(0)
 })
 }
+
 
 
 loco();
