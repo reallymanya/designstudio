@@ -36,7 +36,7 @@ html,body{
     justify-content: center;
     text-align: center;
 z-index: 99;
-display: none;
+/* display: none; */
 }
 
 #loader h1{
@@ -139,7 +139,9 @@ z-index: 7;
     align-items: center;
     flex-direction: column;
     background-size: cover;
-    /* background-position: center; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .elem{
@@ -328,4 +330,318 @@ cursor: pointer;
   flex-direction: column;
   align-items: center;
   gap: 3px; /* small space between arrow & text */
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+
+/* Large tablets and small desktops */
+@media screen and (max-width: 1024px) {
+    #nav {
+        padding: 20px 30px;
+    }
+    
+    .img-container {
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    #img-div {
+        width: 45vw;
+        margin: 20px 8px;
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    #nav {
+        padding: 15px 20px;
+    }
+    
+    #nav h3 {
+        font-size: 18px;
+    }
+    
+    .nav-btn {
+        font-size: 16px;
+    }
+    
+    .nav-buttons {
+        gap: 15px;
+    }
+    
+    #page1 h1 {
+        font-size: 8vw;
+        line-height: 6.5vw;
+        letter-spacing: -2px;
+        padding: 0 20px;
+    }
+    
+    #page2 {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    .elem h2 {
+        font-size: 8vw;
+        line-height: 6.5vw;
+    }
+    
+    .elem .moving .moving-in h5 {
+        font-size: 14px;
+        margin-right: 25px;
+    }
+    
+    .img-container {
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    #img-div {
+        width: 90vw;
+        margin: 15px 0;
+    }
+    
+    .overlay p {
+        font-size: 4vw;
+        line-height: 4vw;
+    }
+    
+    #footer {
+        height: 30vh;
+        gap: 20px;
+    }
+    
+    #footer h2 {
+        font-size: 2vw;
+    }
+    
+    .ri-arrow-up-s-line {
+        font-size: 3vw;
+    }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+    #nav {
+        padding: 10px 15px;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    #nav h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .nav-buttons {
+        gap: 20px;
+    }
+    
+    .nav-btn {
+        font-size: 14px;
+    }
+    
+    #page1 h1 {
+        font-size: 10vw;
+        line-height: 8vw;
+        letter-spacing: -1px;
+        padding: 0 15px;
+    }
+    
+    #page2 {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center center;
+        min-height: 100vh;
+    }
+    
+    .elem h2 {
+        font-size: 10vw;
+        line-height: 8vw;
+    }
+    
+    .elem .moving .moving-in h5 {
+        font-size: 12px;
+        margin-right: 20px;
+    }
+    
+    .img-container {
+        padding: 10px;
+        gap: 8px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #img-div {
+        width: 95vw;
+        margin: 10px 0;
+        max-width: 350px;
+    }
+    
+    .overlay p {
+        font-size: 5vw;
+        line-height: 5vw;
+        padding: 10px;
+    }
+    
+    #footer {
+        height: 25vh;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    #footer h2 {
+        font-size: 3vw;
+    }
+    
+    .ri-arrow-up-s-line {
+        font-size: 4vw;
+    }
+    
+    .backtotop {
+        gap: 5px;
+    }
+}
+
+/* Very small mobile phones */
+@media screen and (max-width: 320px) {
+    #nav {
+        padding: 8px 10px;
+    }
+    
+    #nav h3 {
+        font-size: 14px;
+    }
+    
+    .nav-btn {
+        font-size: 12px;
+    }
+    
+    .nav-buttons {
+        gap: 15px;
+    }
+    
+    #page1 h1 {
+        font-size: 12vw;
+        line-height: 10vw;
+        padding: 0 10px;
+    }
+    
+    #page2 {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center center;
+        min-height: 100vh;
+    }
+    
+    .elem h2 {
+        font-size: 12vw;
+        line-height: 10vw;
+    }
+    
+    .elem .moving .moving-in h5 {
+        font-size: 10px;
+        margin-right: 15px;
+    }
+    
+    .img-container {
+        padding: 8px;
+    }
+    
+    #img-div {
+        width: 98vw;
+        margin: 8px 0;
+    }
+    
+    .overlay p {
+        font-size: 6vw;
+        line-height: 6vw;
+    }
+    
+    #footer h2 {
+        font-size: 4vw;
+    }
+    
+    .ri-arrow-up-s-line {
+        font-size: 5vw;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #page1 h1 {
+        font-size: 6vw;
+        line-height: 5vw;
+    }
+    
+    #page2 {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center center;
+        min-height: 100vh;
+    }
+    
+    .elem h2 {
+        font-size: 6vw;
+        line-height: 5vw;
+    }
+    
+    #footer {
+        height: 20vh;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .elem:hover .moving {
+        transform: translate(0,-45%) scaleY(0);
+    }
+    
+    .elem:hover .moving h5 {
+        opacity: 0;
+    }
+    
+    .elem:hover h2 {
+        font-style: normal;
+        color: white;
+    }
+    
+    .elem:active .moving {
+        transform: translate(0,-45%) scaleY(1);
+    }
+    
+    .elem:active .moving h5 {
+        opacity: 1;
+    }
+    
+    .elem:active h2 {
+        font-style: italic;
+        color: black;
+    }
+    
+    #img-div:hover .overlay {
+        background-color: transparent;
+    }
+    
+    #img-div:hover p {
+        opacity: 0;
+    }
+    
+    #img-div:hover img {
+        scale: 1;
+    }
+    
+    #img-div:active .overlay {
+        background-color: #000000f2;
+    }
+    
+    #img-div:active p {
+        opacity: 1;
+    }
+    
+    #img-div:active img {
+        scale: 1.1;
+    }
 }
