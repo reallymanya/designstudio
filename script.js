@@ -35,10 +35,15 @@ tl.to("#loader", {
 
 loading();
 
-// const scroll = new LocomotiveScroll({
-//     el: document.querySelector('#main'),
-//     smooth: true
-// });
+
+function loco(){
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
+
+scroll.on("click")
+
 
 var elems = document.querySelectorAll(".elem")
 var pg = document.querySelector("#page2")
@@ -48,3 +53,39 @@ elems.forEach(function(ele){
      pg.style.backgroundImage = `url(${bg})`;
    })
 })
+
+document.querySelector("#footer .ri-arrow-up-s-line").addEventListener("click",() =>{
+  scroll.scrollTo(0)
+})
+
+document.querySelector("#footer h2").addEventListener("click",() =>{
+  scroll.scrollTo(0)
+})
+}
+
+
+loco();
+
+
+// Simple Bento Layout - Just subtle height variations
+function createSimpleBento() {
+    const imgDivs = document.querySelectorAll('#img-div');
+    
+    // Simple height variations - just 3 different sizes
+    const heights = ['400px', '600px', '500px']; // Small, Medium, Large
+    
+    imgDivs.forEach((imgDiv, index) => {
+        const heightIndex = index % heights.length;
+        imgDiv.style.height = heights[heightIndex];
+        imgDiv.style.transition = 'height 0.3s ease';
+    });
+}
+
+// Apply the simple bento layout
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        createSimpleBento();
+    }, 500);
+});
+
+

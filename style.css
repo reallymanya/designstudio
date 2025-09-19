@@ -29,7 +29,7 @@ html,body{
     height: 100vh;
     width: 100%;
     background-color: black;
-    color: white;
+    color: #ffffff;
     position: fixed;
      display: flex;
     align-items: center;
@@ -269,3 +269,38 @@ gap: 25px;
     scale: 1.1;
 }
 
+#footer{
+    height: 40vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#footer #foot{
+    height: 50%;
+    width: 100%;
+    background-color: black;
+}
+
+#footer h2{
+font-family: "Poppins";
+text-transform: uppercase;
+font-size: 1vw;
+cursor: pointer;
+}
+
+.ri-arrow-up-s-line{
+    font-size: 2vw;
+    line-height: 1;
+
+}
+.backtotop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px; /* small space between arrow & text */
+}
